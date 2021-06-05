@@ -1,6 +1,12 @@
 - 👋 Hi, I’m @Kratika28-agr
 - 🌱 I’m currently learning CP
 - 📫 How to reach me kratikaagrawal8@gmail.com
+
+
+
+
+
+
 #144-BinaryTreePreorderTraversal solution LeetCode 
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
