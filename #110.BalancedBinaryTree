@@ -1,0 +1,28 @@
+class Solution {
+//for finding height of trre
+    int height(TreeNode root){
+         if(root == null) return 0;  // if root is null ,i.e height is 0
+        int leftChild=height(root.left);
+         int rightChild=height(root.right);
+        return Math.max(leftChild,rightChild)+1;   //max of both left and right subtree and add 1
+    }
+    
+    public boolean isBalanced(TreeNode root) {
+        if(root == null) return true;
+        
+        if(isBalanced(root.left) == false){
+            return false;
+        }
+            if(isBalanced(root.right) == false){
+            return false;
+        }
+        
+      int leftChild=height(root.left);  
+        int rightChild=height(root.right);  
+        if(Math.abs(leftChild - rightChild) <= 1){
+            return true;
+        }
+        else
+            return false;
+    }
+}
